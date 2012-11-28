@@ -44,10 +44,12 @@ bussort.each{|aa|
 	tdiff = t - aa.getbust
 
 #	if(( tdiff < 600 ) && (tdiff > 1800) )
+	if tdiff < 600 and tdiff > -1800
 		print aa.getbust.strftime("%H:%M")
+#		print "tdiff =", tdiff
 		if (aa.gettwin == true)
 			print " twinliner"
 		end
 		puts()
-#	end
+	end
 }
